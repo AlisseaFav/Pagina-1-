@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI </title>
+    <style>
+        @media screen and (max-width: 480px){}
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0b1522;
+            overflow: hidden;
+            /* Para evitar que los corazones se muestren fuera del área visible */
+        }
+
+        .heart {
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            position: relative;
+            transform: rotate(45deg);
+            box-shadow: -20px 20px 150px #f20044;
+            animation: palpitar 1s ease-in-out infinite alternate;
+        }
+
+        .contenido {
+            position: fixed;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        .texto-largo {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            max-width: 600px;
+            margin:auto;
+            text-align: center;
+            color: white;
+        }
+        
+        .texto {
+            position: absolute;
+            text-align: center;
+            color: white;
+            width: 100%;
+            top: 0;
+        }
+        h1,
+        h2 {
+            color: white;
+        }
+
+        @keyframes palpitar {
+            0% {
+                transform: rotate(45deg) scale(1);
+                box-shadow: -20px 20px 150px #f20044;
+            }
+
+            50% {
+                transform: rotate(45deg) scale(1.1);
+                box-shadow: -20px 20px 150px #ff6699;
+            }
+
+            100% {
+                transform: rotate(45deg) scale(1);
+                box-shadow: -20px 20px 150px #f20044;
+            }
+        }
+
+        .heart::before {
+            content: "";
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            background: red;
+            right: 50%;
+            border-radius: 50%;
+            box-shadow: 20px 20px 150px #f20044;
+        }
+
+        .heart::after {
+            content: "";
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            background: red;
+            top: -50%;
+            border-radius: 50%;
+            box-shadow: 20px 20px 150px #f20044;
+        }
+
+        /* Animación para los corazones pequeños */
+        @keyframes flotar {
+            0% {
+                transform: translateY(0) rotate(0);
+            }
+
+            100% {
+                transform: translateY(-200px) rotate(360deg);
+            }
+        }
+
+        /* Estilo para los corazones pequeños */
+        .corazon-pequeno {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff4d6d;
+            transform: rotate(45deg);
+            animation: flotar 5s ease-in-out infinite;
+        }
+
+        .corazon-pequeno::before {
+            content: "";
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background: #ff4d6d;
+            right: 50%;
+            border-radius: 50%;
+        }
+
+        .corazon-pequeno::after {
+            content: "";
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background: #ff4d6d;
+            top: -50%;
+            border-radius: 50%;
+        }
+
+        /* Posiciones aleatorias para los corazones pequeños */
+        .corazon1 {
+            top: 30%;
+            left: 0%;
+        }
+        
+        .corazon2 {
+            top: 30%;
+            left: 90%;
+        }
+        
+        .corazon3 {
+            top: 60%;
+            left: 0%;
+        }
+        
+        .corazon4 {
+            top: 60%;
+            left: 90%;
+        }
+        
+        .corazon5 {
+            top: 90%;
+            left: 0%;
+        }
+        
+        .corazon6 {
+            top: 90%;
+            left: 90%;
+        }
+        
+        .corazon7 {
+            top: 20%;
+            left: 0%;
+        }
+        
+        .corazon8 {
+            top: 20%;
+            left: 90%;
+        }
+        
+        .corazon9 {
+            top: 70%;
+            left: 0%;
+        }
+        
+        .corazon10 {
+            top: 70%;
+            left: 90%;
+        }
+
+    </style>
+</head>
+<h1></h1>
+
+<body>
+    <div class="heart"></div>
+    <div class="contenido">
+        <h1>TE AMO</h1>
+        <h2>.... ...</h2>
+    </div>
+    <div class="texto">
+        <h1>Feliz Vida Mi Vida</h1>
+    </div>
+    <!-- Corazones pequeños -->
+    <div class="corazon-pequeno corazon1"></div>
+    <div class="corazon-pequeno corazon2"></div>
+    <div class="corazon-pequeno corazon3"></div>
+    <div class="corazon-pequeno corazon4"></div>
+    <div class="corazon-pequeno corazon5"></div>
+    <div class="corazon-pequeno corazon6"></div>
+    <div class="corazon-pequeno corazon7"></div>
+    <div class="corazon-pequeno corazon8"></div>
+    <div class="corazon-pequeno corazon9"></div>
+    <div class="corazon-pequeno corazon10"></div>
+
+    <!-- Agrega más corazones pequeños si lo deseas -->
+    <!-- Texto largo -->
+    <div class="texto-largo">
+        <p>Feliz vida mi vida, hoy es un día especial donde las estrellas en la noche brillarán más que otros simples días, esta fecha 
+            es especial ya que una persona tan noble como tu ha nacido hace exactamente 17 años, deseo con todo mi corazón que sigas 
+            teniendo esa alegria indescriptible y genuina que te caractiza; deseo con mi corazón que hoy y siempre seas feliz. 
+            Hoy prometo que en tu próximo cumpleaños te daré el abrazo más grande que jamás hayas recibido.  </p>
+    </div>
+
+    <script>
+        window.onload = function() {
+            var corazones = document.getElementsByClassName('corazon-pequeno');
+            for (var i = 0; i < corazones.length; i++) {
+                var top = Math.random() * (window.innerHeight - 150); // 150 es la altura del corazón grande
+                var left = Math.random() * (window.innerWidth - 150); // 150 es el ancho del corazón grande
+                corazones[i].style.top = top + 'px';
+                corazones[i].style.left = left + 'px';
+            }
+        }
+    </script>
+    
+</body>
+
+
+</html>
